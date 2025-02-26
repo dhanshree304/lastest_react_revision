@@ -1,0 +1,46 @@
+.emoji {
+  width: 190px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+#contact{
+    margin-top: 180px;
+}
+.emoji:hover {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
+}
+
+.emojiDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+input{
+  height: 3rem;
+  width: 25rem;
+  border: 1px solid gray;
+  color: white;
+  font-size: 1.3rem;
+  margin: 20px;
+  padding: 20px;
+}
+
+#submitBtn {
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  justify-content: center;
+ 
+  align-items: center;
+ 
+
+  
+  font-weight: 600;
+  cursor: pointer;
+}
