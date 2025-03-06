@@ -50,7 +50,7 @@ const myProjects = [
 
 const Projects = () => {
   return (
-    <div style={{ marginTop: "80px" }} id="project">
+    <div style={{ marginTop: "80px",width:"90%",margin:"auto" }} id="project">
       <div>
         <h1 style={{ textAlign: "center" }}>Self Implemented Projects</h1>
       </div>
@@ -59,9 +59,10 @@ const Projects = () => {
           display: "grid",
           gridTemplateColumns: "repeat(3,1fr)",
           gap: "20px",
-          justifyContent: "center",
+         
           textAlign: "center",
-          marginTop: "80px",
+          marginTop: "80px"
+          
         }}
       >
         {myProjects.map((project, ind) => (

@@ -5,10 +5,13 @@ import {Link} from 'react-scroll'
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>DHANSHREE UPADHYE</h1>
+      <Link to="intro" smooth={true}>
+        <h1 className="logo">DHANSHREE UPADHYE</h1>
+      </Link>
       <div>
         <Link
           activeClass="active"
+          smooth={true}
           spy={true}
           offset={-100}
           duration={500}
@@ -19,6 +22,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
+          smooth={true}
           spy={true}
           offset={-100}
           duration={500}
@@ -29,6 +33,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
+          smooth={true}
           spy={true}
           offset={-100}
           duration={500}
@@ -39,6 +44,7 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
+          smooth={true}
           spy={true}
           offset={-100}
           duration={500}
@@ -49,8 +55,9 @@ const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
+          smooth={true}
           spy={true}
-          offset={-500}
+          offset={-100}
           duration={500}
           to="contact"
           className="navLinks"
@@ -58,7 +65,7 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <Link to=''>
+      <Link to="">
         <button className="resumeBtn">RESUME</button>
       </Link>
     </div>

@@ -7,13 +7,13 @@ const About = () => {
       
         <h1 style={{textAlign:"center"}}>About Me</h1>
       </div>
-      <div className="aboutMe">
+      <div className="aboutMain">
         <div className="aboutImgDiv">
           <img
-            src="aboutMejpg.jpg"
+            src="about.svg"
             alt="profile"
-            height="500px"
-            width="500px"
+           
+            width="70%"
           />
         </div>
         <div className="aboutParaDiv">

@@ -9,7 +9,7 @@ const ProjectCard = ({project}) => {
       style={{
         border: "1px solid gray",
         height: "auto",
-        width: "70%",
+        borderRadius:"10px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

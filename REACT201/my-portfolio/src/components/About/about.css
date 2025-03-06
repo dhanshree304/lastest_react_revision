@@ -1,32 +1,22 @@
-.aboutMe{
-     height: 100vh;
-    width: 100vw;
-    max-width: 75rem;
-    margin-top:80px;
-  
-   
-    display: flex;
-    /* justify-content: center; */
-    align-items: self-start;
-    gap: 20px;
-  
-    
+.aboutMain {
+  height: 80vh;
+  width: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-
-.aboutImgDiv{
-
-
-z-index: -1;
-object-fit: cover;
-
+.aboutImgDiv {
+  z-index: -1;
+  object-fit: cover;
 }
 
-.aboutParaDiv{
-   width: 40%;
+.aboutParaDiv {
+  width: 40%;
 }
-.aboutPara{
-
-line-height: 2.5rem; 
-
+.aboutPara {
+  line-height: 2.5rem;
 }

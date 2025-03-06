@@ -6,7 +6,7 @@ const TechSkillCard = ({item}) => {
       style={{
         border: "1px solid gray",
         height: "150px",
-        width: "60%",
+       borderRadius:"10px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
