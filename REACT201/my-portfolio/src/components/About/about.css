@@ -20,3 +20,18 @@
 .aboutPara {
   line-height: 2.5rem;
 }
+
+.responsive {
+  width: 30%;
+}
+@media (max-width: 768px) {
+  .login-responsive {
+    width: 70%;
+  }
+}
+
+@media (max-width: 456px) {
+  .login-wrapper {
+    width: 90%;
+  }
+}

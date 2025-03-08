@@ -61,12 +61,12 @@ height: 100vh;
 
 @media screen and (max-width:840px){
     .myImage{
-        right:-10vw;
+        right:-10vw
     }
     .introContent{
-        font-size: 10vw;
+        font-size: 10vw
     }
     .hello{
-        font-size: 4.5vw;
+        font-size: 4.5vw
     }
 }

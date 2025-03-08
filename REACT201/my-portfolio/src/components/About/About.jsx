@@ -12,7 +12,7 @@ const About = () => {
           <img
             src="about.svg"
             alt="profile"
-           
+           className="aboutImage"
             width="70%"
           />
         </div>

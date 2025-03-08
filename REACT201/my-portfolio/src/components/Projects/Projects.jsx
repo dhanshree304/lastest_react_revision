@@ -25,7 +25,7 @@ const myProjects = [
   },
 
   {
-    img:"pop4.jpg" ,
+    img: "pop4.jpg",
     name: "Book-Management App",
     description:
       "A full-stack web application that allows users to add, update, delete, and search books in a collection.",
@@ -50,20 +50,24 @@ const myProjects = [
 
 const Projects = () => {
   return (
-    <div style={{ marginTop: "80px",width:"90%",margin:"auto" }} id="project">
+    <div
+      style={{ marginTop: "80px", width: "90%", margin: "auto" }}
+      id="project"
+      
+    >
       <div>
         <h1 style={{ textAlign: "center" }}>Self Implemented Projects</h1>
       </div>
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          gap: "20px",
-         
-          textAlign: "center",
-          marginTop: "80px"
-          
-        }}
+        className="projectDiv"
+        // style={{
+        //   display: "grid",
+        //   gridTemplateColumns: "repeat(3,1fr)",
+        //   gap: "20px", 
+
+        //   textAlign: "center",
+        //   marginTop: "80px",
+        // }}
       >
         {myProjects.map((project, ind) => (
           <ProjectCard key={ind} project={project} />

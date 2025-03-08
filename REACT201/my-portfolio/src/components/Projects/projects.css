@@ -1,0 +1,28 @@
+.projectDiv { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+   text-align: center; 
+  margin-top: 80px;
+}
+
+
+ @media screen and (max-width:1040px){
+  .projectDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media screen and (max-width:840px){
+  .projectDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
+
+
+@media screen and (max-width:440px){
+  .projectDiv {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}  
