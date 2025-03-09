@@ -13,7 +13,7 @@ const About = () => {
             src="about.svg"
             alt="profile"
            className="aboutImage"
-            width="70%"
+           
           />
         </div>
         <div className="aboutParaDiv">

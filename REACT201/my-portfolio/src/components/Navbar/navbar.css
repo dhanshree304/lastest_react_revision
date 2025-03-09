@@ -1,51 +1,123 @@
+.navbar {
+  height: 5rem;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(30, 30, 30);
+}
+.logo {
+  cursor: pointer;
+}
+.navLinks {
+  margin: 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
 
-.navbar{
-    height:5rem;
-    width: 100%;
+.active {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
+}
+.navLinks:hover {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
+}
+.resumeBtn {
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.navbarLinks {
+  display: flex;
+}
+
+.menuTrigger {
+  display: none;
+  background-color: white;
+  border-radius: 4px;
+  padding: 3px;
+  border: none;
+  height: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.menuContent {
+  padding: 10px;
+  width: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: rgba(236, 233, 233, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  height: 100vh;
+  background-color: rgb(66, 64, 64);
+  
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-inline: 10px;
+}
+@media screen and (max-width: 1080px) {
+  .navbarLinks {
+    display: none;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .menuTrigger {
+    display: block;
     
-    margin:0 auto;
-    padding:1rem 2rem;
-    display: flex;
-     align-items: center; 
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index:999;
-     background-color: rgb(30, 30, 30); 
-   
-
-}
-.logo{
-    cursor: pointer;
-}
-.navLinks{
-    margin: 1rem;
-    cursor: pointer;
+  }
+  .active {
+    width: fit-content;
+  }
+  .navLinks:hover {
+    width: fit-content;
+  }
+  .navLinks {
+    margin: 0px;
+  }
 }
 
-
-.active{
-   color:yellow; 
-   padding-bottom: 0.5rem;
-    border-bottom: 2px solid yellow; 
-}
-.navLinks:hover{
-    color:yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid yellow;
-}
-.resumeBtn{
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2rem;
-    padding: 0 1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-     font-weight: 600; 
-    
-
+@media screen and (max-width: 456px) {
+  .navbarLinks {
+    display: none;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .active {
+    width: fit-content;
+  }
+  .navLinks:hover {
+    width: fit-content;
+  }
+  .navLinks {
+    margin: 0px;
+  }
 }

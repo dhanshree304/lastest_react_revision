@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import "./projects.css";
 
 const myProjects = [
   {
@@ -51,24 +52,14 @@ const myProjects = [
 const Projects = () => {
   return (
     <div
-      style={{ marginTop: "80px", width: "90%", margin: "auto" }}
+   
       id="project"
-      
+      className="projectDiv"
     >
       <div>
         <h1 style={{ textAlign: "center" }}>Self Implemented Projects</h1>
       </div>
-      <div
-        className="projectDiv"
-        // style={{
-        //   display: "grid",
-        //   gridTemplateColumns: "repeat(3,1fr)",
-        //   gap: "20px", 
-
-        //   textAlign: "center",
-        //   marginTop: "80px",
-        // }}
-      >
+      <div className="projectMainDiv">
         {myProjects.map((project, ind) => (
           <ProjectCard key={ind} project={project} />
         ))}

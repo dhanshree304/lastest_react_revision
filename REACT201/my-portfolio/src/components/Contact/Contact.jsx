@@ -60,18 +60,13 @@ const Contact = () => {
   return (
     <div id="contact">
       <h1 style={{ textAlign: "center" }}>Contact Me</h1>
-      <p style={{ textAlign: "center", marginTop: "10px" }}>
+      <p style={{ textAlign: "center",margin:"10px", marginTop: "10px" }}>
         Please fill out the form below to discuss any work opportunities.
       </p>
       <div
-        style={{
-          marginTop: "30px",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-        }}
+        className="contactSubDiv"
       >
-        <div className="emojiDiv">
+        <div className="emojiDiv" >
           <h1 className="emoji">
             <RiGithubFill /> GitHub
           </h1>
@@ -86,8 +81,8 @@ const Contact = () => {
           </h1>
         </div>
 
-        <div>
-          <form action="" ref={form} onSubmit={sendEmail}>
+        <div className="formdiv">
+          <form action="" ref={form} onSubmit={sendEmail} >
             <input
               name="name"
               value={contact.name}

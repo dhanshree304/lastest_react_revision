@@ -1,5 +1,6 @@
 import React from "react";
 import TechSkillCard from "./TechSkillCard";
+import "./tech-skills.css"
 
 const images = [
   { img: "HTML5.png", skill: "HTML" },
@@ -27,14 +28,7 @@ const TechSkills = () => {
         <h1 style={{ textAlign: "center" }}>Tech Skills</h1>
       </div>
       <div
-        style={{
-          display: "grid",
-
-          gridTemplateColumns: "repeat(6,1fr)",
-          gap: "40px",
-          textAlign: "center",
-          marginTop: "80px",
-        }}
+        className="skillsGridDiv"
       >
         {images.map((item, ind) => (
           <TechSkillCard key={ind} item={item} />

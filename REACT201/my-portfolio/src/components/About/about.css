@@ -2,7 +2,6 @@
   height: 80vh;
   width: 100%;
 
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +12,9 @@
   z-index: -1;
   object-fit: cover;
 }
-
+.aboutImage{
+  width: 70%;
+}
 .aboutParaDiv {
   width: 40%;
 }
@@ -21,17 +22,32 @@
   line-height: 2.5rem;
 }
 
-.responsive {
-  width: 30%;
-}
-@media (max-width: 768px) {
-  .login-responsive {
-    width: 70%;
+/* tab */
+
+@media screen and (max-width: 1080px) {
+  .aboutMain {
+    height: auto;
+margin-top: 20px;
+    flex-direction: column;
+gap:20px;
+    /* justify-content: center;
+  align-items: center; */
   }
+  .aboutParaDiv {
+    width: 90%;
+    text-align: center;
+  }.aboutImage{
+  width: 100%;
+}
 }
 
-@media (max-width: 456px) {
-  .login-wrapper {
-    width: 90%;
+/* @media screen and (max-width: 456px) {
+  .aboutMain {
+    height: auto;
+
+    flex-direction: column;
+
+    justify-content: center;
+  align-items: center;
   }
-}
+} */
