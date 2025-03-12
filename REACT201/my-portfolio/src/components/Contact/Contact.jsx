@@ -60,29 +60,38 @@ const Contact = () => {
   return (
     <div id="contact">
       <h1 style={{ textAlign: "center" }}>Contact Me</h1>
-      <p style={{ textAlign: "center",margin:"10px", marginTop: "10px" }}>
+      <p style={{ textAlign: "center", margin: "10px", marginTop: "10px" }}>
         Please fill out the form below to discuss any work opportunities.
       </p>
-      <div
-        className="contactSubDiv"
-      >
-        <div className="emojiDiv" >
-          <h1 className="emoji">
-            <RiGithubFill /> GitHub
-          </h1>
-          <h1 className="emoji">
-            <MdEmail /> Email
-          </h1>
-          <h1 className="emoji">
-            <FaPhone /> Phone
-          </h1>
-          <h1 className="emoji">
-            <GrLinkedin /> Linkedin
-          </h1>
+      <div className="contactSubDiv">
+        <div className="emojiDiv">
+          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+            <h1 className="emoji">
+              <RiGithubFill /> GitHub
+            </h1>
+          </a>
+
+          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+            <h1 className="emoji">
+              <FaPhone /> Phone
+            </h1>
+          </a>
+
+          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+            <h1 className="emoji">
+              <GrLinkedin /> Linkedin
+            </h1>
+          </a>
+
+          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+            <h1 className="emoji">
+              <MdEmail /> Email
+            </h1>
+          </a>
         </div>
 
         <div className="formdiv">
-          <form action="" ref={form} onSubmit={sendEmail} >
+          <form action="" ref={form} onSubmit={sendEmail}>
             <input
               name="name"
               value={contact.name}

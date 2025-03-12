@@ -4,7 +4,7 @@ import "./projects.css";
 
 const myProjects = [
   {
-    img: "pop2.jpg",
+    img: "notes.png",
     name: "Notes App",
     description:
       "A simple and intuitive notes application that allows users to create, edit, and delete notes.",
@@ -14,7 +14,7 @@ const myProjects = [
     liveLink: "https://cute-hamster-07e107.netlify.app",
   },
   {
-    img: "pop1.jpg",
+    img: "bmi.png",
     name: "BMI Calculator",
     description:
       "A Body Mass Index (BMI) Calculator that helps users determine their BMI based on height and weight inputs. Provides health recommendations based on BMI categories.",
@@ -24,7 +24,7 @@ const myProjects = [
     liveLink: "https://warm-cranachan-1579be.netlify.app",
   },
   {
-    img: "pop3.jpg",
+    img: "todo.png",
     name: "Todo App",
     description:
       "A task management app that enables users to add, edit, mark complete, and delete tasks.",
@@ -47,7 +47,7 @@ const myProjects = [
   },
 
   {
-    img: "pop5.jpg",
+    img: "weather.png",
     name: "Weather App",
     description:
       "It is a weather app which gives information about current weather situtation of any city , one have to search the name of the city and it gives information about weahter condition",
@@ -57,7 +57,7 @@ const myProjects = [
     liveLink: "https://gleeful-malabi-27a0ca.netlify.app",
   },
   {
-    img: "pop6.jpg",
+    img: "myntra.png",
     name: "Myntra Clone",
     description:
       "Myntra is an E-commerce website where u can buy & see various kinds house hold materials and many more things .I have built exact copy of myntra. Its my solo project.",

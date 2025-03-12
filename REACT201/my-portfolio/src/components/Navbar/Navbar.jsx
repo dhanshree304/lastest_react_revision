@@ -9,7 +9,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="intro" smooth={true}>
-        <h1 className="logo">DHANSHREE UPADHYE</h1>
+        <h1 className="logo">
+          <span style={{ color: "yellow" }}>D</span>HANSHREE
+          <span style={{ color: "yellow" }}>U</span>PADHYE
+        </h1>
       </Link>
       <div className="navbarLinks">
         <Link

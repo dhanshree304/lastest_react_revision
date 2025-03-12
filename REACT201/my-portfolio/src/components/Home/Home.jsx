@@ -12,7 +12,7 @@ const Home = () => {
         <span>
           I'm <span className="introName">Dhanshree</span>
           <br />
-          Full-Stack Web Developer{" "}
+          Full-Stack Web Developer
         </span>
         <p className="introPara">
           I am a skilled web designer worked on 100 + small big projects

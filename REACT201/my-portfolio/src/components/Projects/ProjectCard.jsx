@@ -19,13 +19,13 @@ const ProjectCard = ({ project }) => {
       }}
     >
       <div>
-        <img src={project.img} alt="" height="250px" width="200px" />
+        <img src={project.img} alt="" height="250px" width="400px" />
       </div>
-      <h1 style={{ marginTop: "7px", color: "yellow" }}>{project.name}</h1>
-      <p style={{ marginTop: "7px", lineHeight: "20px" }}>
+      <h1 style={{ marginTop: "9px", color: "yellow" }}>{project.name}</h1>
+      <p style={{ marginTop: "11px", lineHeight: "20px" }}>
         {project.description}
       </p>
-      <h4 style={{ marginTop: "8px", lineHeight: "20px" }}>
+      <h4 style={{ marginTop: "11px", lineHeight: "20px" }}>
         <span style={{ color: "yellow" }}>Tech Stack: </span>
         {project.stack}
       </h4>
@@ -39,14 +39,24 @@ const ProjectCard = ({ project }) => {
         }}
       >
         <div>
-          <Link to={project.githubLink}>
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "white" }}
+          >
             <IoLogoGithub />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link to={project.liveLink}>
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "white" }}
+          >
             <BsFillSendFill />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
