@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import { BsFillSendFill } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
-const ProjectCard = ({project}) => {
+const ProjectCard = ({ project }) => {
   return (
     <div
       style={{
         border: "1px solid gray",
         height: "auto",
-      
-        borderRadius:"10px",
+
+        borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -35,23 +35,22 @@ const ProjectCard = ({project}) => {
           fontSize: "1.5rem",
           justifyContent: "space-around",
           marginTop: "20px",
-          cursor:"pointer"
+          cursor: "pointer",
         }}
       >
         <div>
-          <Link>
-         
+          <Link to={project.githubLink}>
             <IoLogoGithub />
           </Link>
         </div>
         <div>
-          <Link>
+          <Link to={project.liveLink}>
             <BsFillSendFill />
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default ProjectCard
+export default ProjectCard;
