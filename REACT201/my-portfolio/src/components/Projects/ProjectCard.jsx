@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
       }}
     >
       <div>
-        <img src={project.img} alt="" height="250px" width="400px" />
+        <img src={project.img} alt="" height="250px" width="400px" style={{borderRadius:"10px"}}/>
       </div>
       <h1 style={{ marginTop: "9px", color: "yellow" }}>{project.name}</h1>
       <p style={{ marginTop: "11px", lineHeight: "20px" }}>

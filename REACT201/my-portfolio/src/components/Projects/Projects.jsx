@@ -17,7 +17,7 @@ const myProjects = [
     img: "bmi.png",
     name: "BMI Calculator",
     description:
-      "A Body Mass Index (BMI) Calculator that helps users determine their BMI based on height and weight inputs. Provides health recommendations based on BMI categories.",
+      "A Body Mass Index (BMI) Calculator that helps users determine their BMI based on height and weight inputs.",
     stack: "MongoDB, Express.js, React.js, and Node.js ",
     githubLink:
       "https://github.com/dhanshree304/backend_Code/tree/main/BMICALCI",
@@ -36,7 +36,7 @@ const myProjects = [
   },
 
   {
-    img: "pop4.jpg",
+    img: "ev-manage.png",
     name: "Event-management",
     description:
       "Designed and developed a comprehensive event management application to streamline event planning, attendee registration, scheduling, and communication.",
@@ -50,7 +50,7 @@ const myProjects = [
     img: "weather.png",
     name: "Weather App",
     description:
-      "It is a weather app which gives information about current weather situtation of any city , one have to search the name of the city and it gives information about weahter condition",
+      "It is a weather app which gives information about current weather situtation of any city , when we search the name of the city and it gives information about weahter condition",
     stack: "HTML,css,javascript",
     githubLink:
       "https://github.com/dhanshree304/Learing_basaic-advanced_js/tree/main/30-days-30-projects/WEATHER_APP_day-1",

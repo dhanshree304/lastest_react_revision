@@ -77,7 +77,10 @@ const Contact = () => {
             </h1>
           </a>
 
-          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+          <a
+            href="https://www.linkedin.com/in/dhanshree-upadhye-054568299"
+            style={{ color: "white" }}
+          >
             <h1 className="emoji">
               <GrLinkedin /> Linkedin
             </h1>

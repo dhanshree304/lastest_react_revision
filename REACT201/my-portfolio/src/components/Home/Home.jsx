@@ -15,15 +15,19 @@ const Home = () => {
           Full-Stack Web Developer
         </span>
         <p className="introPara">
-          I am a skilled web designer worked on 100 + small big projects
+          Creative and detail-oriented Web Designer with experience in 100+
+          small and large projects . Proficient in
+          UI/UX design, responsive web development, and modern design trends to
+          create visually appealing and user-friendly websites.
+       
         </p>
-        <Link to='contact'>
+        <Link to="contact">
           <button className="hireMeBtn">
-            <FaShoppingBag className="bg"/> 
-             Hire Me!
+            <FaShoppingBag className="bg" />
+            Hire Me!
           </button>
         </Link>
-        <img src="MyImage.jpg" alt="profile" className="myImage" />
+        <img src="myself.svg" alt="profile" className="myImage" />
       </div>
     </div>
   );

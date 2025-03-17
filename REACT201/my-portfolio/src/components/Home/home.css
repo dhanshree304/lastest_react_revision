@@ -10,7 +10,7 @@
 
 .introContent{
     height: 100vh;
-    width: 100vw;
+    width: 80vw;
     padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
@@ -28,6 +28,9 @@
 .introPara{
     font-size: medium;
     font-weight: 100;
+    width: 50%;
+    line-height: 1.5rem;
+    margin-top: 10px;
 }
 .bg{
     font-size: 1.2rem;
@@ -52,11 +55,11 @@
 
 .myImage{
 position: absolute;
-top: -4rem;
-right: 0;
+top: 10rem;
+right: 30px;
 z-index: -1;
 object-fit: cover;
-height: 100vh;
+height: 60vh;
 }
 
 @media screen and (max-width:840px){
