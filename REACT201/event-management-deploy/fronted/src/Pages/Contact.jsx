@@ -35,7 +35,7 @@ const Contact = () => {
         )
     
     axios
-      .post("http://localhost:8081/customerInfo", info)
+      .post("https://lastest-react-revision.onrender.com/customerInfo", info)
       .then((r) => console.log(r))
       .catch((e) => console.log(e));
   };

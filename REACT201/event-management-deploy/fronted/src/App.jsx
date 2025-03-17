@@ -1,5 +1,4 @@
-import Footer from "./Comps/Footer";
-import Landing from "./Pages/Landing";
+
 
 
 
