@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { GetPlaceDetails, GetWikiImage } from "@/service/GlobalApi";
-import axios from "axios";
+import {  GetWikiImage } from "@/service/GlobalApi";
+
 import { useEffect, useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import { getJson } from "serpapi";
+
 
 const InfoSection = (props) => {
   const { trip } = props;

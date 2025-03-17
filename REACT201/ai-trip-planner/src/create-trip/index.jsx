@@ -111,10 +111,11 @@ const CreateTrip = () => {
   };
 
   const getPlaces = async (search) => {
-    const root = `https://maps.gomaps.pro/maps/api/place/autocomplete/json?input=${search}&key=AlzaSyA0Uta0-HzpVCmZTOx07HddZhPRcYdtoAd`;
+    //const root = `https://maps.gomaps.pro/maps/api/place/autocomplete/json?input=${search}&key=AlzaSyA0Uta0-HzpVCmZTOx07HddZhPRcYdtoAd`;
+    const root = `https://api.geoapify.com/v1/geocode/autocomplete?text=${search}&apiKey=b1d4bb46ba8343d293aa0a78a3364679&type=locality&limit=5`;
 
     const res = await axios.get(root);
-    setPlacesOptions(res.data.predictions ?? []);
+    setPlacesOptions(res.data.features ?? []);
     console.log(res);
   };
   useEffect(() => {
@@ -139,14 +140,16 @@ const CreateTrip = () => {
             choice?
           </h2>
           <ComboBox
-            value={place?.description} //place={in prediction}
+            value={place?.properties.city} //place={in prediction}
             options={placesOptions.map((plc) => ({
-              label: plc.description,
-              value: plc.description,
+              label: plc.properties.city,
+              value: plc.properties.city,
             }))}
             onSearchValueChange={(val) => setSearchValue(val)}
             onValueChange={(val) => {
-              const temp = placesOptions.find((plc) => plc.description === val);
+              const temp = placesOptions.find(
+                (plc) => plc.properties.city === val
+              );
               setPlace(temp);
               handleInputChange("location", val);
             }}
