@@ -56,7 +56,7 @@
 .myImage{
 position: absolute;
 top: 10rem;
-right: 30px;
+right: 100px;
 z-index: -1;
 object-fit: cover;
 height: 60vh;

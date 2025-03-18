@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="navbar">
       <Link to="intro" smooth={true}>
         <h1 className="logo">
-          <span style={{ color: "yellow" }}>D</span>HANSHREE 
+          <span style={{ color: "yellow" }}>D</span>HANSHREE
           <span style={{ color: "yellow" }}> U</span>PADHYE
         </h1>
       </Link>
@@ -71,9 +71,12 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <Link to="" className="navbarLinks">
+      <a
+        href="https://drive.google.com/file/d/1lIavTr3ltS8-GD0CgULRZkBQ0vQk1dzz/view?usp=sharing"
+        className="navbarLinks"
+      >
         <button className="resumeBtn">RESUME</button>
-      </Link>
+      </a>
 
       <button className="menuTrigger" onClick={() => setOpen(!open)}>
         <IoMenuSharp />
@@ -162,11 +165,14 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            {/* <Link to="" className="navbarLinks"> */}
-            <button className="resumeBtn" onClick={() => setOpen(!open)}>
-              RESUME
-            </button>
-            {/* </Link> */}
+            <Link
+              to="https://drive.google.com/file/d/1lIavTr3ltS8-GD0CgULRZkBQ0vQk1dzz/view?usp=sharing"
+              className="navbarLinks"
+            >
+              <button className="resumeBtn" onClick={() => setOpen(!open)}>
+                RESUME
+              </button>
+            </Link>
           </div>
         </div>
       )}

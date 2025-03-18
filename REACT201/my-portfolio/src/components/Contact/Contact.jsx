@@ -20,8 +20,8 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
-     if (contact.name === "") {
+
+    if (contact.name === "") {
       setError({
         name: "please enter name",
         email: "",
@@ -71,14 +71,14 @@ const Contact = () => {
             </h1>
           </a>
 
-          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+          <a href="tel:9307802002" style={{ color: "white" }}>
             <h1 className="emoji">
               <FaPhone /> Phone
             </h1>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/dhanshree-upadhye-054568299"
+            href="https://www.linkedin.com/in/dhanshree-upadhye-41ba21237/"
             style={{ color: "white" }}
           >
             <h1 className="emoji">
@@ -86,7 +86,7 @@ const Contact = () => {
             </h1>
           </a>
 
-          <a href="https://github.com/dhanshree304" style={{ color: "white" }}>
+          <a href="mailto:dhanshreeupadhye0@gmail.com" style={{ color: "white" }}>
             <h1 className="emoji">
               <MdEmail /> Email
             </h1>

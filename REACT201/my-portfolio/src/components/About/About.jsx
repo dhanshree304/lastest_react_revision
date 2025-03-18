@@ -18,7 +18,7 @@ const About = () => {
         </div>
         <div className="aboutParaDiv">
           <p className="aboutPara">
-            My name's Dhanshree Upadhye and i enjoy creating things that live on
+            My name is Dhanshree Upadhye and I enjoy creating things that live on
             the internet. I'm a Full-Stack Web Developer with the ability to
             learn and collaborate in rapidly changing environments and
             compositions. Worked through 1000+ hours of Bootcamp structure

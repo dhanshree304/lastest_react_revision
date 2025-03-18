@@ -43,7 +43,7 @@ const myProjects = [
     stack: "Express.js, React.js,Redux,MongoDB,  and Node.js ",
     githubLink:
       "https://github.com/dhanshree304/lastest_react_revision/tree/main/REACT201/event-decor",
-    liveLink: "",
+    liveLink: "https://cosmic-cocada-27d1f2.netlify.app/",
   },
 
   {
