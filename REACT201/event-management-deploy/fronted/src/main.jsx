@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./Pages/About";
 
 import CorporEve from "./Pages/CorporEve";
-import Services from "./Pages/Services";
+// import Services from "./Pages/Services";
 import Weedings from "./Pages/Weedings";
 import Landing from "./Pages/Landing";
 import Navbar from "./Comps/Navbar";
@@ -29,16 +29,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <Contact/>,
   },
   {
     path: "/corporate-events",
     element: <CorporEve />,
   },
-  {
-    path: "/services",
-    element: <Services />,
-  },
+  // {
+  //   path: "/services",
+  //   element: <Services />,
+  // },
   {
     path: "/weedings",
     element: <Weedings />,
