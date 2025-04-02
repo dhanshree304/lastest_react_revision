@@ -17,7 +17,7 @@ app.use("/books", bookRouter);
 app.listen(9087,async()=>{
     try {
         await connection
-        console.log("Connected to DB successfully ")
+        console.log("Connected to DB successfully ",9087)
     } catch (error) {
         console.log("Error in connecting to DB",error)
         
