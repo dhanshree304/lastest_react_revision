@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
+
 const FilterComp = () => {
-const [searchParams,setSearchParams] = useSearchParams()
+const [,setSearchParams] = useSearchParams()
 const [category,setCategory]=useState([])
+const sortBy="price"
 const [order,setOrder] = useState("")
 
 const handleFilter=(e)=>{
@@ -24,47 +26,56 @@ const handleOrder=(e)=>{
 
 useEffect(()=>{
   const params ={}
+
+ 
+
   if(category || order){
     category && (params.category=category);
     order && (params.order=order)
-setSearchParams(params)
+    order && (params.sortBy=sortBy)
   }
+  setSearchParams(params)
 },[category,order,setSearchParams])
   return (
     <>
-      <div className="flex flex-col text-ali">
+      <div className="flex flex-col items-center">
         <div className="mt-10">
+          
           <h1 className="text-2xl font-bold">Filter by Category</h1>
-          <label className="text-xl mt-10 ml-2">History</label>
+          <label className="text-xl font-medium ">History</label>
 
           <input
-          className="h-4 w-4"
+            className="h-4 w-4"
             type="checkbox"
             value="History"
             onChange={handleFilter}
             checked={category.includes("History")}
           />
           <br />
-          <label>Business</label>
+
+          <label className="text-xl font-medium">Business</label>
           <input
+            className="h-4 w-4"
             type="checkbox"
             value="Business"
             onChange={handleFilter}
             checked={category.includes("Business")}
           />
           <br />
-          <label>Fictional</label>
+          <label className="text-xl font-medium">Fiction</label>
           <input
+            className="h-4 w-4"
             type="checkbox"
-            value="Fictional"
+            value="Fiction"
             onChange={handleFilter}
-            checked={category.includes("Fictional")}
+            checked={category.includes("Fiction")}
           />
         </div>
         <div className="mt-10">
           <h1 className="text-2xl font-bold">Sort by Price</h1>
-          <label>Ascending</label>
+          <label className="text-xl font-medium">Ascending</label>
           <input
+            className="h-4 w-4"
             type="radio"
             value="asc"
             name="order"
@@ -72,8 +83,9 @@ setSearchParams(params)
             defaultChecked={order === "asc"}
           />
           <br />
-          <label>Descending</label>
+          <label className="text-xl font-medium">Descending</label>
           <input
+            className="h-4 w-4"
             type="radio"
             value="desc"
             name="order"

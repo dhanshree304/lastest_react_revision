@@ -6,6 +6,7 @@ import Login from "./Pages/Login";
 import AddBook from "./Pages/AddBook";
 import Edit from "./Pages/Edit";
 import Home from "./Pages/Home";
+import SingleBook from "./Pages/SingleBook";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/add-book" element={<AddBook />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/single-book/:id" element={<SingleBook />} />
       </Routes>
     </>
   );

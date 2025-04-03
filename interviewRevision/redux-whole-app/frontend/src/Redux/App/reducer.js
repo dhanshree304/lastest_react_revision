@@ -4,7 +4,8 @@ import { GET_BOOKS_FAILURE, GET_BOOKS_REQUEST, GET_BOOKS_SUCCESS } from "./actio
 const initState ={
 isLoading:false,
 books:[],
-isError:false
+isError:false,
+pagination:{totalPages:0,totalCount:0}
 }
 
 const reducer_2=(oldState=initState,action)=>{
@@ -15,7 +16,7 @@ const reducer_2=(oldState=initState,action)=>{
         return { ...oldState, isLoading:true };
 
       case GET_BOOKS_SUCCESS:
-        return { ...oldState, isLoading:false,books:payload };
+        return { ...oldState, isLoading:false,books:payload ,pagination:action.pagination};
 
       case GET_BOOKS_FAILURE:
         return { ...oldState, books:[],isError:true};

@@ -2,9 +2,10 @@ import { POST_BOOK_REQUEST } from "../App/actionTypes";
 import { POST_LOGIN_FAILURE, POST_LOGIN_REQUEST, POST_LOGIN_SUCCESS, USER_LOGOUT } from "./actionTypes";
 
 const initState = {
+
   isAuthLoading: false,
   isAuth: false,
-  token: "",
+  token: localStorage.getItem("alot_books") || "", 
   isAuthError: false,
 };
 
