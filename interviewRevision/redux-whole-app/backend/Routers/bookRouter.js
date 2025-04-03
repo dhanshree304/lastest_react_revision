@@ -1,5 +1,7 @@
 const { Router } = require("express");
 const { bookModel } = require("../Models/bookModel");
+const { authentication } = require("../Middlewares/authentication");
+const { authorization } = require("../Middlewares/authorization");
 
 const bookRouter = Router();
 
@@ -44,7 +46,7 @@ bookRouter.get("/", async (req, res) => {
   } catch (error) {}
 });
 
-bookRouter.post("/add", async (req, res) => {
+bookRouter.post("/add", authentication, authorization, async (req, res) => {
   const { category, title, price, imageUrl } = req.body;
 
   try {
@@ -61,27 +63,39 @@ bookRouter.post("/add", async (req, res) => {
   }
 });
 
-bookRouter.patch("/edit/:id", async (req, res) => {
-  const { id } = req.params;
+bookRouter.patch(
+  "/edit/:id",
+  authentication,
+  authorization,
+  async (req, res) => {
+    const { id } = req.params;
 
+    try {
+      const editedBook = await bookModel.findOneAndUpdate(
+        { _id: id },
+        req.body
+      ); //update ho jayegi
+      res.status(200).json({ msg: "Updated book successfully" });
+    } catch (error) {
+      res.status(500).json({ msg: "Unable to update the book" });
+    }
+  }
+);
+
+bookRouter.delete("/delete/:id", authentication, async (req, res) => {
+  const { id } = req.params;
   try {
-    const editedBook = await bookModel.findOneAndUpdate({ _id: id }, req.body); //update ho jayegi
-    res.status(200).json({ msg: "Updated book successfully" });
+    await bookModel.findOneAndDelete({ _id: id });
+    res.status(200).json({ msg: "Book deleted successfully" });
   } catch (error) {
-    res.status(500).json({ msg: "Unable to update the book" });
+    res.status(500).json({ msg: "Unable to delete the book" });
   }
 });
 
-bookRouter.delete("/delete/:id", async(req, res) => {
-    const {id} = req.params;
-    try {
-        await bookModel.findOneAndDelete({_id:id})
-        res.status(200).json({msg:"Book deleted successfully"})
-    } catch (error) {
-        res.status(500).json({msg:"Unable to delete the book"})
-    }
-
-
+bookRouter.get("/single-book/:id",async(req,res)=>{
+  const {id} =req.params;
+  const book= await bookModel.findOne({_id:id})
+  res.status(200).json(book)
 });
 
 module.exports = { bookRouter };
