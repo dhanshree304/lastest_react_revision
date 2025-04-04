@@ -5,12 +5,12 @@ import { updateBook } from "../Redux/App/action";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { API_BASE } from "@/Utils/util";
+import { API_BASE } from "../Utils/util";
 
 const EditBook = () => {
   const [book, setBook] = useState({
   title:"",
-  catgeory:"",
+  category:"",
   imageUrl:"",
   price:""
   });
@@ -27,7 +27,7 @@ const EditBook = () => {
 const fetchOneBook =async()=>{
 try {
   const resp = await axios.get(`${API_BASE}/books/single-book/${id}`)
-  setBook(resp)
+  setBook(resp.data)
   console.log(resp.data.book)
 } catch (error) {
   console.log(error)
@@ -39,7 +39,7 @@ try {
     dispatch(updateBook(book,id)).then(() => navigate("/"));
   };
 
-
+console.log(book)
   useEffect(()=>{
     fetchOneBook()
   },[id])
@@ -47,23 +47,27 @@ try {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          className="border border-black "
           type="text"
           onChange={handleChange}
           name="imageUrl"
           value={book.imageUrl}
         />
+        <br />
         <input
           type="text"
           onChange={handleChange}
           name="title"
           value={book.title}
         />
+        <br />
         <input
           type="text"
           onChange={handleChange}
           name="category"
-          value={book.catgeory}
+          value={book.category}
         />
+        <br />
         <input
           type="number"
           onChange={handleChange}

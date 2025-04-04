@@ -7,7 +7,7 @@ const AddBook = () => {
   const [book, setBook] = useState({
     title: "",
     imageUrl: "",
-    catgeory: "",
+    category: "",
     price: "",
   });
 
@@ -28,24 +28,28 @@ const AddBook = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          className="border border-black"
           type="text"
           onChange={handleChange}
           name="imageUrl"
           value={book.imageUrl}
         />
         <input
+          className="border border-black"
           type="text"
           onChange={handleChange}
           name="title"
           value={book.title}
         />
         <input
+          className="border border-black"
           type="text"
           onChange={handleChange}
           name="category"
-          value={book.catgeory}
+          value={book.category}
         />
         <input
+          className="border border-black"
           type="number"
           onChange={handleChange}
           name="price"

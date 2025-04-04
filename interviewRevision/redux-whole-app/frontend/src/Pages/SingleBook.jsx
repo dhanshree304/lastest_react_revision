@@ -13,7 +13,7 @@ const SingleBook = () => {
 
     try {
       const resp = await axios.get(`${API_BASE}/books/single-book/${id}`);
-      setBook(resp.data.book);
+      setBook(resp.data);
     } catch (error) {
       console.log(error)
     }
