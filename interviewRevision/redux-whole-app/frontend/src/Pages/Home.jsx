@@ -14,13 +14,13 @@ const [pageParams,setPageParams] = useState({page:1,limit:4})
 
   return (
     <div>
-      <Link to="/single-book/:id">
+      <Link to="/add-book">
         <Button className="mb-5">ADD BOOK</Button>
       </Link>
 
       <Pagination pageParams={pageParams} setPageParams={setPageParams} />
       <div className="flex justify-between gap-6 mt-10 ">
-        <FilterComp />
+        <FilterComp setPageParams={setPageParams}/>
         <Booklist pageParams={pageParams} />
       </div>
     </div>

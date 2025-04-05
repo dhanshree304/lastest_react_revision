@@ -1,9 +1,11 @@
 import { login} from "@/Redux/Auth/action";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
+const location=useLocation()
+const commingFrom = location.state?.data
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({
@@ -17,7 +19,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(login(loginInfo)).then(()=>navigate("/"))
+    dispatch(login(loginInfo)).then(()=>navigate(commingFrom || "/"))
   };
 
   return (
@@ -39,6 +41,8 @@ const Login = () => {
         />
         <input type="submit" value="LOGIN" className="border bg-black text-white p-2 w-[90px]" />
       </form>
+
+      <h1>Dont have an account ?<Link to="/signup">Sign up</Link></h1>
     </div>
   );
 };

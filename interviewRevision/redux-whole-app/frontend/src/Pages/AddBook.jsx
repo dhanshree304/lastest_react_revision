@@ -1,9 +1,13 @@
-import { addBook } from "@/Redux/App/action";
+
+import { Button } from "@/components/ui/button";
+import { addBook } from "../Redux/App/action";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+
 const AddBook = () => {
+   const token = useSelector((store) => store.reducer_1.token) 
   const [book, setBook] = useState({
     title: "",
     imageUrl: "",
@@ -22,13 +26,15 @@ const AddBook = () => {
 
   const handleSubmit =(e)=>{
     e.preventDefault()
-    dispatch(addBook(book)).then(()=>navigate("/"))
+  
+   dispatch(addBook(book,token)).then(() => navigate("/"));
   }
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
           className="border border-black"
+          placeholder="Enter ImateUrl"
           type="text"
           onChange={handleChange}
           name="imageUrl"
@@ -36,6 +42,7 @@ const AddBook = () => {
         />
         <input
           className="border border-black"
+          placeholder="Enter Title"
           type="text"
           onChange={handleChange}
           name="title"
@@ -43,6 +50,7 @@ const AddBook = () => {
         />
         <input
           className="border border-black"
+          placeholder="Enter Category"
           type="text"
           onChange={handleChange}
           name="category"
@@ -50,11 +58,16 @@ const AddBook = () => {
         />
         <input
           className="border border-black"
+          placeholder="Enter Price"
           type="number"
           onChange={handleChange}
           name="price"
           value={book.price}
         />
+
+        <Button type="submit">
+          <input type="submit" value="ADD" />
+        </Button>
       </form>
     </div>
   );

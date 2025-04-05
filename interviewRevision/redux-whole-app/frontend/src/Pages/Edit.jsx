@@ -3,11 +3,15 @@
 import axios from "axios";
 import { updateBook } from "../Redux/App/action";
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { API_BASE } from "../Utils/util";
+
+import { Button } from "@/components/ui/button";
+import { API_BASE } from "@/lib/utils";
 
 const EditBook = () => {
+
+  const token =useSelector((store)=>store.reducer_1.token) 
   const [book, setBook] = useState({
   title:"",
   category:"",
@@ -21,7 +25,11 @@ const EditBook = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setBook((prev) => ({ ...prev, [name]: value }));
+
+
+  
+ 
+    setBook((prev) => ({ ...prev, [name]: name==="price" ?Number(value) :value  }));
   };
 
 const fetchOneBook =async()=>{
@@ -36,7 +44,9 @@ try {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateBook(book,id)).then(() => navigate("/"));
+    delete book._id
+    dispatch(updateBook(book,id,token)).then(() => navigate("/"));
+
   };
 
 console.log(book)
@@ -55,6 +65,7 @@ console.log(book)
         />
         <br />
         <input
+          className="border border-black "
           type="text"
           onChange={handleChange}
           name="title"
@@ -62,6 +73,7 @@ console.log(book)
         />
         <br />
         <input
+          className="border border-black "
           type="text"
           onChange={handleChange}
           name="category"
@@ -69,11 +81,15 @@ console.log(book)
         />
         <br />
         <input
+          className="border border-black "
           type="number"
           onChange={handleChange}
           name="price"
           value={book.price}
         />
+        <Button type="submit">
+          <input type="submit" value="EDIT BOOK" />
+        </Button>
       </form>
     </div>
   );

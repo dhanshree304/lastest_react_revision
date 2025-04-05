@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 
-const FilterComp = () => {
+const FilterComp = ({setPageParams}) => {
 const [,setSearchParams] = useSearchParams()
 const [category,setCategory]=useState([])
 const sortBy="price"
@@ -33,9 +33,10 @@ useEffect(()=>{
     category && (params.category=category);
     order && (params.order=order)
     order && (params.sortBy=sortBy)
+    setPageParams((prev)=>({...prev,page:1}))
   }
   setSearchParams(params)
-},[category,order,setSearchParams])
+},[category,order,setSearchParams,setPageParams])
   return (
     <>
       <div className="flex flex-col items-center">

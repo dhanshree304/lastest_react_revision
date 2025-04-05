@@ -1,13 +1,15 @@
 import axios from "axios";
 import * as types from "./actionTypes";
-import { API_BASE } from "../../Utils/util";
-import { useSelector } from "react-redux";
+import { API_BASE } from "@/lib/utils";
 
 
-const GetToken=()=>{
-  const token = useSelector((store)=>store.reducer_1.token)
-  return {token}
-}
+
+
+
+// const GetToken=()=>{
+//   const token = useSelector((store)=>store.reducer_1.token)
+//   return {token}
+// }
 
 const getBooks = (payload) => (dispatch) => {
   console.log("cbvgf");
@@ -23,9 +25,9 @@ const getBooks = (payload) => (dispatch) => {
     .catch((e) => dispatch({ type: types.GET_BOOKS_FAILURE, payload: e }));
 };
 
-const updateBook = (payload,id) => (dispatch) => {
+const updateBook = (payload,id,token) => (dispatch) => {
   dispatch({ type: types.PATCH_BOOK_REQUEST });
-  const {token} = GetToken()
+
   return axios
     .patch(`${API_BASE}/books/edit/${id}`,payload, {
       headers: { Authorization: `bearer ${token}` },
@@ -34,19 +36,20 @@ const updateBook = (payload,id) => (dispatch) => {
     .catch((e) => dispatch({ type: types.PATCH_BOOK_FAILURE, payload: e }));
 };
 
-const addBook = (payload) => (dispatch) => {
-  dispatch({ type: types.POST_BOOK_REQUEST });
-    const { token } = GetToken();
+const addBook = (payload,token) => (dispatch) => {
+  console.log(payload);
+ 
+  // dispatch({ type: types.POST_BOOK_REQUEST });
   return axios
-    .get(`${API_BASE}/books/add`, payload, {
+    .post(`${API_BASE}/books/add`, payload, {
       headers: { Authorization: `bearer ${token}` },
     })
-    .then(() => dispatch({ types: types.POST_BOOK_SUCCESS }))
+    .then(() => dispatch({ type: types.POST_BOOK_SUCCESS }))
     .catch((e) => dispatch({ type: types.POST_BOOK_FAILURE, payload: e }));
 };
 
-const deleteBook = (id) => (dispatch) => {
-    const { token } = GetToken();
+const deleteBook = (id,token) => (dispatch) => {
+  
   return axios
     .delete(`${API_BASE}/books/delete/${id}`,{
       headers: { Authorization: `bearer ${token}` }

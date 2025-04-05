@@ -7,6 +7,8 @@ import AddBook from "./Pages/AddBook";
 import Edit from "./Pages/Edit";
 import Home from "./Pages/Home";
 import SingleBook from "./Pages/SingleBook";
+import RequireAuth from "./Comps/requireAuth";
+import EditBook from "./Pages/Edit";
 
 
 function App() {
@@ -16,8 +18,22 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/add-book" element={<AddBook />} />
-        <Route path="/edit/:id" element={<Edit />} />
+        <Route
+          path="/add-book"
+          element={
+            <RequireAuth>
+              <AddBook />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            <RequireAuth>
+              <EditBook />
+            </RequireAuth>
+          }
+        />
         <Route path="/single-book/:id" element={<SingleBook />} />
       </Routes>
     </>

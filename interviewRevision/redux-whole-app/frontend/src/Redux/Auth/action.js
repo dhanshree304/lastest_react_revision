@@ -3,7 +3,9 @@
 
 import axios from "axios"
 import * as types from "./actionTypes"
-import { API_BASE } from "@/Utils/util"
+import { API_BASE } from "@/lib/utils"
+
+
 
 
 const signup =(payload)=>(dispatch)=>{

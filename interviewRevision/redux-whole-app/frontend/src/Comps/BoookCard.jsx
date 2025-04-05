@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { deleteBook, getBooks } from "@/Redux/App/action";
+import { deleteBook} from "@/Redux/App/action";
+
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
+
+    const token = useSelector((store) => store.reducer_1.token)  
   const dispatch=useDispatch()
   
 
   const deleteOneBook=()=>{
-    dispatch(deleteBook(`${book.id}`)).then(()=>getBooks())
+    dispatch(deleteBook(`${book._id}`,token)).then(()=>window.location.reload())
   }
   return (
     <div className="border w-[400px] p-2 flex flex-col items-center justify-cente">
