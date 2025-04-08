@@ -13,6 +13,7 @@ const Pagination = ({ handlePrev, handleNext, currPage }) => {
       <button onClick={handleNext} disabled={totalPages === currPage}>
         NEXT
       </button>
+      <button>Stop</button>
     </div>
   );
 };

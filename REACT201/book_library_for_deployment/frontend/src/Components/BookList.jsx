@@ -22,7 +22,7 @@ const BookList = ({pagination}) => {
           page: pagination.currPage,
           limit: pagination.limit,
         },
-      };
+      }
 
       dispatch(getAllBooks(getBookParams));
     }

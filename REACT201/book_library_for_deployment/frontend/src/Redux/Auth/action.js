@@ -7,8 +7,8 @@ const login = (payload) => (dispatch) => {
   return axios
     .post(`${API_BASE}/login`, payload)
     .then((r) => {
-        console.log(r)
-        console.log(r.data);
+        console.log(r)//big obj have data key : books bheetl aani token pn
+        console.log(r.data)
       return dispatch({
         type: types.POST_LOGIN_SUCCESS,
         payload: r.data.token,
@@ -22,11 +22,12 @@ const signup = (payload) => (dispatch) => {
   return axios
     .post(`${API_BASE}/signup`, payload)
     .then((r) => {
-      console.log(r);
-      console.log(r.data);
+      console.log(r);//big obj {} data is key : msg: signup successfull.
+      console.log(r.data); 
       return 
     })
     .catch((e) => dispatch({ type: types.POST_LOGIN_FAILURE, payload: e }));
 };
 
 export {login,signup}
+

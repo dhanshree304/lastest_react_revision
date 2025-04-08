@@ -15,13 +15,13 @@ const removeUser=()=>{
 }
 
 const reducer=(oldState=initialState,action)=>{
-    const {type,payload}= action
+    const {type,payload}= action;
 switch (type) {
   case POST_LOGIN_REQUEST:
     return { ...oldState, isAuthLoading: true };
 
   case POST_LOGIN_SUCCESS:
-    saveToken(payload)
+    saveToken(payload)//r.data.token
     return { ...oldState, isAuthLoading: false, isAuth: true, token: payload };
 
   case POST_LOGIN_FAILURE:

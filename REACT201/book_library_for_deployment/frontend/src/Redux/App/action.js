@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as types from "./actionTypes";
-import { API_BASE, getToken } from "../../Utils/utils";
+import { API_BASE} from "../../Utils/utils";
 
 const getAllBooks = (payload) => (dispatch) => {
   dispatch({ type: types.GET_BOOKS_REQUEST });
@@ -33,6 +33,6 @@ const createBook = (payload,token) => (dispatch) => {
   return axios
     .post(`${API_BASE}/book/create`, payload,{headers: { Authorization: `bearer ${token}` }})
     .then((r) => dispatch({ type: types.POST_BOOK_SUCCESS }))
-    .catch((e) => dispatch({ type: types.POST_BOOK_FAILURE }));
+    .catch((e) => dispatch({ type: types.POST_BOOK_FAILURE }))
 };
 export { getAllBooks, updatebook, createBook };

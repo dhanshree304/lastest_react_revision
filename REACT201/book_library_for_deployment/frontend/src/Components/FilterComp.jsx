@@ -10,6 +10,8 @@ const [category,setCategory] = useState(initialCategoryFilter || [])
 const [sort,setSort] = useState(initialSort[0] || "");
 
 
+
+
 const handleFilter =(e)=>{
   const newCategories = [...category]
   if(newCategories.includes(e.target.value)){
@@ -35,7 +37,7 @@ if(category || sort ){
 }
 },[category,sort,setSearchParams])
   return (
-    <div style={{}}>
+    <div>
       <h3>FILTER BY CATEGORY</h3>
       <div style={{ fontSize: "20px" }}>
         <label>Fictional</label>

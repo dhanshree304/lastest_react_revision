@@ -18,7 +18,9 @@ const reducer = (oldState = initialState, action) => {
       return { ...oldState, isLoading: true };
 
     case GET_BOOKS_SUCCESS:
-      return { ...oldState, isLoading: false, allbooks: payload,pagination:action.pagination };
+      return { ...oldState, isLoading: false, allbooks: payload,pagination:action.pagination };//action obj 
+      // /me se destructure kra he pagination from login function in action.js
+
 
     case GET_BOOKS_FAILURE:
       return { ...oldState, allbooks: [], isError: true };
