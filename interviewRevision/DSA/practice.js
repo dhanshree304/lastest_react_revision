@@ -108,14 +108,35 @@
 
 // console.log(diffK(arr,k))
 
-function getAllSubarrays(arr) {
-  let n = arr.length;
-  for (let i = 0; i < n; i++) {
-    let subarray = [];
-    for (let j = i; j < n; j++) {
-      subarray.push(arr[j]);
-      console.log([...subarray]); // print each subarray
-    }
-  }
+// function getAllSubarrays(arr) {
+//   let n = arr.length;
+//   for (let i = 0; i < n; i++) {
+//     let subarray = [];
+//     for (let j = i; j < n; j++) {
+//       subarray.push(arr[j]);
+//       console.log([...subarray]); // print each subarray
+//     }
+//   }
+// }
+// getAllSubarrays([1,2,3,4,5,6])
+
+
+
+
+
+
+let str1 ="amit"
+
+
+let str2 ="mita"
+
+function isPermutation(str1,str2){
+    let sorted1=str1.split("").sort().join("")
+        let sorted2 = str2.split("").sort().join("");
+         if(sorted1==sorted2){
+            return "yes"
+         }else{
+            return "no"
+         }
 }
-getAllSubarrays([1,2,3,4,5,6])
+console.log(isPermutation(str1,str2))
