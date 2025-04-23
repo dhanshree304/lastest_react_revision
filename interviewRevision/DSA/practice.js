@@ -309,23 +309,127 @@
 
 //Enter code here
 
-function substr(str){
-    let obj={}
-    let count=0
+// function substr(str){
+//     let obj={}
+//     let count=0
     
-    for(let i=0;i<str.length-1;i++){
-        let temp=str[i]+str[i+1]//length 2 substring
-    if(obj[temp]===undefined){
-        obj[temp]=true
-        count++
-    }
-    }
-    let arr2=[]
-    for(let key in obj){
-        arr2.push(key)
-    }
+//     for(let i=0;i<str.length-1;i++){
+//         let temp=str[i]+str[i+1]//length 2 substring
+//     if(obj[temp]===undefined){
+//         obj[temp]=true
+//         count++
+//     }
+//     }
+//     let arr2=[]
+//     for(let key in obj){
+//         arr2.push(key)
+//     }
     
-    console.log(arr2,count)
-}
-substr("abbbc")
+//     console.log(arr2,count)
+// }
+// substr("abbbc")
 
+//.........................................
+
+//all substrings
+// function getAllSubstrings(str) {
+//   let result = [];
+
+//   for (let i = 0; i < str.length; i++) {
+//     let temp = "";
+//     for (let j = i; j < str.length; j++) {
+//       temp += str[j]; // build substring character by character
+//       result.push(temp);
+//     }
+//   }
+
+//   return result;
+// }
+
+// let str = "zoomsessionmooz";
+// console.log(getAllSubstrings(str));
+
+
+//.........................................
+
+
+
+// function removeD(str){
+//     let bag=""
+//     for(let i=0;i<str.length;i++){
+//         if(str[i]!==str[i+1]){
+//             bag+=str[i]
+//         }
+//     }
+//     console.log(bag)
+// }
+
+// removeD("aaabccddd")
+
+//..................................................
+
+
+
+// function removeD(str){
+//    let obj={}
+//    for(let i=0;i<str.length;i++){
+//        if(obj[str[i]]==undefined){
+//            obj[str[i]]=1
+//        }else{
+//             obj[str[i]]+=1
+//        }
+//    }
+//    console.log(obj)
+//    let bag=""
+   
+//    for(let key in obj){
+//        if(obj[key]%2==1){
+//            bag+=key
+//        }
+//    }
+//    console.log(bag)
+// }
+
+// removeD("aaabccddd");
+
+//...............................................
+
+//Enter code here
+
+// function prod(arr){
+//   let arr2=[]
+//   for(let i=0;i<arr.length;i++){
+//     let prod=1
+//     for(let j=0;j<arr.length;j++){
+//             if(j==i){
+//                 continue
+//             }else{
+//                 prod*=arr[j]
+//               }
+//             }
+//             arr2.push(prod)
+       
+        
+        
+//     }
+//     console.log(arr2)
+// }
+
+// prod([2,3,4,5,6])
+
+//.......................................................
+
+function stacks(str) {
+  let st = [];
+
+  for (let i = 0; i<str.length; i++) {
+    if (str[i] == "#") {
+      st.pop();
+    } else {
+      st.push(str[i]);
+    }
+  }
+
+  console.log(st.join(""));
+}
+stacks("ab#c")
