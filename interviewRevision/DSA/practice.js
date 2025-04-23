@@ -419,17 +419,88 @@
 
 //.......................................................
 
-function stacks(str) {
-  let st = [];
+// function stacks(str) {
+//   let st = [];
 
-  for (let i = 0; i<str.length; i++) {
-    if (str[i] == "#") {
-      st.pop();
-    } else {
-      st.push(str[i]);
+//   for (let i = 0; i<str.length; i++) {
+//     if (str[i] == "#") {
+//       st.pop();
+//     } else {
+//       st.push(str[i]);
+//     }
+//   }
+
+//   console.log(st.join(""));
+// }
+// stacks("ab#c")
+//..................................................................
+
+
+
+
+//for loop chy aat define klei aani access klei tr matrix chya format mde print hot 
+//nhitr string chya form mde  
+
+// function addOne(mat) {
+//   let n = mat.length; //row
+//   let m = mat[0].length; //col
+
+//   for (let i = 0; i < n; i++) {
+//     let bag = "";
+//     for (let j = 0; j < m; j++) {
+//       bag = bag+(mat[i][j] + 1)+" "
+//     }
+//     console.log(bag);
+//   }
+// }
+
+// addOne([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ]);
+
+
+//.....................................................................
+
+//Enter code here
+
+// function rectMat(mat){
+//     let n=mat.length
+//     let m=mat[0].length
+//     for(let i=0;i<n;i++){
+//     let bag= ""
+//         for(let j=0;j<m;j++){
+//             bag=bag+(mat[i][j]+1)+" "
+//         }
+        
+//     console.log(bag)
+//     }
+// }
+// rectMat([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ])
+
+//.........................................................
+
+//Enter code here
+
+
+function addK(mat,k){
+    let n=mat.length
+    let m=mat[0].length
+    for(let i=0;i<n;i++){
+        let bag=""
+        for(let j=0;j<m;j++){
+            bag+=(mat[i][j]+k)+" "
+        }
+        console.log(bag)
     }
-  }
-
-  console.log(st.join(""));
 }
-stacks("ab#c")
+addK([
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+],3)
