@@ -488,19 +488,137 @@
 //Enter code here
 
 
-function addK(mat,k){
-    let n=mat.length
-    let m=mat[0].length
-    for(let i=0;i<n;i++){
-        let bag=""
-        for(let j=0;j<m;j++){
-            bag+=(mat[i][j]+k)+" "
-        }
-        console.log(bag)
+// function addK(mat,k){
+//     let n=mat.length
+//     let m=mat[0].length
+//     for(let i=0;i<n;i++){
+//         let bag=""
+//         for(let j=0;j<m;j++){
+//             bag+=(mat[i][j]+k)+" "
+//         }
+//         console.log(bag)
+//     }
+// }
+// addK([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ],3)
+
+//......................................................
+
+
+
+// function giveInd(arr, k) {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left != right) {
+//     if (arr[left] + arr[right] == k) {
+     
+//       return `${left} ${right}`;
+//     } else if (arr[left] + arr[right] > k) {
+//       right--;
+//     } else {
+//       left++;
+//     }
+//   }
+//   return `${-1} ${- 1}`;
+// }
+
+// console.log(giveInd([2, 7, 11, 15], 14));
+
+//..................................................................
+
+//Enter code here
+
+
+// function findMazSum(arr,k){
+//    let sorted= arr.sort((a,b)=>a-b)
+//    let maxSum=0
+//    let count=0
+//    console.log(sorted)
+//    for(let i=sorted.length-1;i>=0 && count<k; i--){
+//        maxSum+=arr[i]
+//        count++
+//    }
+//    console.log(maxSum)
+// }
+
+// let arr=[-1,-1,-2,-1,-2,4,1,9,2,9]
+// let k=3
+
+// findMazSum(arr,k)
+
+
+// function pair(arr,k){
+    
+//   let maxSum=0
+//     for(let i=0;i<arr.length;i++){
+//       for(let j=i+1;j<arr.length;j++){
+//             if(arr[i]+arr[j]<k && maxSum<arr[i]+arr[j]){
+//                 maxSum=arr[i]+arr[j]
+//             }
+//         }
+//       }
+//       console.log(maxSum)
+// }
+
+// pair([1,2,3,4,5],10)
+
+//...................................................
+
+//Enter code here
+
+// function missInt(arr){
+//     let sum =0
+//     for(let i=1;i<=arr.length+1;i++){
+//         sum+=i
+//     }
+//     console.log(sum)
+//     let sum2=0
+//     for(let j=0;j<arr.length;j++){
+//         sum2+=arr[j]
+//     }
+//     console.log(sum2)
+//     let requireEle=sum-sum2
+//     console.log(requireEle);
+// }
+
+// missInt([2,3,1,5])
+//...........................................................
+// function threeMaxThreeMin(N, arr) {
+//   //write code here
+
+//   let sorted = arr.sort((a, b) => a - b);
+//  let fir3= sorted.slice(0, 3);
+
+// let last3 = sorted.slice(-3);
+  
+      
+  
+
+//   console.log(fir3, last3);
+// }
+// threeMaxThreeMin(6,[2,5,4,2,1,6])
+
+//..........................................................
+
+
+function foo(arr, k) {
+  var count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] == k) {
+        count++;
+      }
     }
+  }
+
+  if (count => 1) {
+    return 1;
+  } else {
+    return -1;
+  }
 }
-addK([
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-],3)
+console.log(foo([3,2,1,4],3))
