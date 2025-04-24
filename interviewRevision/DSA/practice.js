@@ -605,20 +605,132 @@
 //..........................................................
 
 
-function foo(arr, k) {
-  var count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] == k) {
-        count++;
-      }
-    }
-  }
+// function foo(arr, k) {
+//   var count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] == k) {
+//         count++;
+//       }
+//     }
+//   }
 
-  if (count => 1) {
-    return 1;
-  } else {
-    return -1;
-  }
+//   if (count => 1) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// }
+// console.log(foo([3,2,1,4],3))
+
+
+//................................................................
+// function solve(N, arr) {
+//   //write code here
+
+//   for (let i = 0; i < N; i++) {
+//     for (let j = i + 1; j < N; j++) {
+//       if (arr[i] > arr[j]) {
+//         [arr[i], arr[j]] = [arr[j], arr[i]];
+//       }
+//     }
+//   }
+//   return arr;
+// }
+// console.log(solve(5, [3, 5, 0, 9, 8]));
+
+//.................................................................
+
+
+
+//Enter code here
+
+// function foo(arr,k){
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=i+1;j<arr.length;j++){
+//             if(arr[i]%k >arr[j]%k){
+//                 [arr[i],arr[j]]= [arr[j],arr[i]]
+//             }
+//         }
+//     }
+//     console.log(arr)
+// }
+// foo([12, 18, 17, 65, 46], 6);
+
+//....................................................
+
+//Enter code here
+
+
+// function PrintRank(arr){
+//     for(let i=1;i<arr.length;i++){
+//         if(arr[i]=="India"){
+//             console.log(i+1)
+//             break;
+//         }
+//     }
+// }
+// PrintRank(["Russia","USA","India","China","India"])
+
+//.........................................................
+//kuch smj nhi aaya kuch bhi nh
+// function winnerTeam(n, arr) {
+//   var obj = [];
+//   for (var i = 0; i < n; i++) {
+//     if (obj[arr[i]] === undefined) {
+//       obj[arr[i]] = 1;
+//     } else {
+//       obj[arr[i]] = obj[arr[i]] + 1;
+//     }
+//   }
+//   var x = -Infinity;
+//   for (var j = 0; j < n; j++) {
+//     if (x < obj[arr[j]]) {
+//       x = obj[arr[j]];
+//       var y = arr[j];
+//     }
+//   }
+//   console.log(y);
+// }
+// winnerTeam(5,["A","A","ABA","A","ABA"])
+
+//..............................................
+//Enter code here
+
+// function goingFor(arr,k){
+   
+//     let count=0
+//     for(let j=0;j<arr.length;j++){
+//         if(arr[j]>=arr[k]){
+//             count++
+//         }
+        
+        
+//     }
+//     console.log(count)
+// }
+
+// goingFor([10,9,8,7,7,7,5,5],5)
+
+
+//Enter code here
+
+function foo(arr,k){
+    let count=0
+    let skips=0
+    for(let i=0;i<arr.length;i++){
+        
+        if(arr[i]<=k){
+            count++
+        }
+        if(arr[i]>k){
+            skips++
+        }
+        if(skips===2){
+            break
+        }
+      }
+      console.log(count)
 }
-console.log(foo([3,2,1,4],3))
+
+foo([4,3,7,6,7,2,2],6)
