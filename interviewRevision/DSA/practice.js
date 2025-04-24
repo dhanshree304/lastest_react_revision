@@ -713,24 +713,69 @@
 // goingFor([10,9,8,7,7,7,5,5],5)
 
 
-//Enter code here
+///...............................................
 
-function foo(arr,k){
-    let count=0
-    let skips=0
-    for(let i=0;i<arr.length;i++){
+// function foo(arr,k){
+//     let count=0
+//     let skips=0
+//     for(let i=0;i<arr.length;i++){
         
-        if(arr[i]<=k){
-            count++
-        }
-        if(arr[i]>k){
-            skips++
-        }
-        if(skips===2){
-            break
-        }
-      }
-      console.log(count)
-}
+//         if(arr[i]<=k){
+//             count++
+//         }
+//         if(arr[i]>k){
+//             skips++
+//         }
+//         if(skips===2){
+//             break
+//         }
+//       }
+//       console.log(count)
+// }
 
-foo([4,3,7,6,7,2,2],6)
+// foo([4,3,7,6,7,2,2],6)
+
+//............................................
+// function alanFrequency(N, str) {
+//   //write code here
+//   let obj = {};
+//   for (let i = 0; i < N; i++) {
+//     if (obj[str[i]] === undefined) {
+//       obj[str[i]] = 1;
+//     } else {
+//       obj[str[i]] += 1;
+//     }
+//   }
+//   for (let key in obj) {
+//     console.log(key,"-", obj[key]);
+//   }
+// }
+// alanFrequency(4,"aman")
+
+//............................................
+
+
+
+// function foo(str){
+ 
+//     for(let i=0;i<str.length;i++){
+//        console.log(str[i])
+//     }
+    
+// }
+
+// foo("ankush")
+
+//..................................................
+
+
+
+function foo(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      console.log(arr[i]);
+   
+    }
+  }
+}
+foo([1, 2, 3, 4, 5]);
