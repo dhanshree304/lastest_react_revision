@@ -770,12 +770,87 @@
 
 
 
-function foo(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-      console.log(arr[i]);
+// function foo(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 == 0) {
+//       console.log(arr[i]);
    
+//     }
+//   }
+// }
+// foo([1, 2, 3, 4, 5]);
+
+//..............................................
+
+
+
+
+// function detectPalII(N, string) {
+//   //write code here
+
+//   let obj = {};
+//   for (let i = 0; i < N; i++) {
+//     if (obj[string[i]] === undefined) {
+//       obj[string[i]] = 1;
+//     } else {
+//       obj[string[i]] += 1;
+//     }
+//   }
+//   let count = 0;
+//   for (let key in obj) {
+//     if (obj[key] % 2 != 0) {
+//       count++;
+//     }
+//   }
+
+//   if (count <= 1) {
+//     console.log("Pal");
+//   } else {
+//     console.log("Not Pal");
+//   }
+// }
+// detectPalII(6,"aaabcc")
+
+//....................................................
+//Enter code here
+
+
+// function stacks(str){
+//     let st=[]
+    
+//     for(let i=0;i<str.length;i++){
+//         if(st[st.length-1]==str[i]){
+//             st.pop()
+//         }else{
+//             st.push(str[i])
+//         }
+//     }
+    
+//     console.log(st.join(""))
+    
+// }
+// stacks("aaabccddd")
+
+//................................................
+
+//Enter code here
+
+//Enter code here
+
+//Enter code here
+
+function foo(arr1,arr2){
+    let arr3=[...arr1,...arr2].sort((a,b)=>a-b)
+    console.log(arr3)
+    
+    let bag=""
+    for(let i=0;i<arr3.length;i++){
+        if(arr3[i]==arr3[i+1]){
+            continue
+        }else{
+            bag+=arr3[i]+ " "
+        }
     }
-  }
+    console.log(bag.split(" "))
 }
-foo([1, 2, 3, 4, 5]);
+foo([1,2,3,4,5],[3,4,5,6])
