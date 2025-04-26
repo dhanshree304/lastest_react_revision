@@ -839,18 +839,64 @@
 
 //Enter code here
 
-function foo(arr1,arr2){
-    let arr3=[...arr1,...arr2].sort((a,b)=>a-b)
-    console.log(arr3)
+// function foo(arr1,arr2){
+//     let arr3=[...arr1,...arr2].sort((a,b)=>a-b)
+//     console.log(arr3)
     
-    let bag=""
-    for(let i=0;i<arr3.length;i++){
-        if(arr3[i]==arr3[i+1]){
-            continue
-        }else{
-            bag+=arr3[i]+ " "
-        }
+//     let bag=""
+//     for(let i=0;i<arr3.length;i++){
+//         if(arr3[i]==arr3[i+1]){
+//             continue
+//         }else{
+//             bag+=arr3[i]+ " "
+//         }
+//     }
+//     console.log(bag.split(" "))
+// }
+// foo([1,2,3,4,5],[3,4,5,6])
+
+//...........................................
+// var sum = function (a, b, c) {
+//   return {
+//     getSumTwo: function () {
+//       return a + b;
+//     },
+//     getSumThree: function () {
+//       return a + b + c;
+//     },
+//   };
+// };
+// var store = sum(2, 3, 4); //calling
+// console.log(store.getSumTwo());
+// console.log(store.getSumThree());
+
+//............................................
+
+// let a = "Hello guys"; //global scope
+
+// const first = (q) => {
+//   //parent function
+//   let b = "How are u?"; // second fun can access its parent b fun bt first function   cant access second fun c
+
+//   const second = () => {
+//     //child function can access a(global scope) b (parent scope) c(its own) and q agian parents variable
+//     let c = "Hi I am fine";
+//     console.log(a+ q + b + c); //
+//   };
+//   return second();
+// };
+
+//console.log(first("!")); 
+
+
+function a(A="hello"){
+  return function b(B){
+    return function c(C){
+      return function d(D){
+        return A+B+C+D;
+      }
     }
-    console.log(bag.split(" "))
-}
-foo([1,2,3,4,5],[3,4,5,6])
+  }
+  }
+  console.log(a()(3)(4)(5))//str is adding with numbers hence o/p is str hello345
+   console.log(a(2)(3)(4)(5)); //only numbers o/p is 14 (A="hello"==parameter which has value  is 2 (argument))
