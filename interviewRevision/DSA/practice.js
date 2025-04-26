@@ -889,14 +889,32 @@
 //console.log(first("!")); 
 
 
-function a(A="hello"){
-  return function b(B){
-    return function c(C){
-      return function d(D){
-        return A+B+C+D;
-      }
-    }
-  }
-  }
-  console.log(a()(3)(4)(5))//str is adding with numbers hence o/p is str hello345
-   console.log(a(2)(3)(4)(5)); //only numbers o/p is 14 (A="hello"==parameter which has value  is 2 (argument))
+// function a(A="hello"){
+//   return function b(B){
+//     return function c(C){
+//       return function d(D){
+//         return A+B+C+D;
+//       }
+//     }
+//   }
+//   }
+//   console.log(a()(3)(4)(5))//str is adding with numbers hence o/p is str hello345
+//    console.log(a(2)(3)(4)(5)); //only numbers o/p is 14 (A="hello"==parameter which has value  is 2 (argument))
+
+
+
+//...........................................................
+
+
+ function fetchData(callback) {
+   setTimeout(function () {
+     console.log("Data has been fetched!");
+     callback();
+   }, 2000);
+ }
+
+ function processData() {
+   console.log("Data processing complete!");
+ }
+
+ fetchData(processData);
