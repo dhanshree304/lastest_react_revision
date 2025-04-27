@@ -171,3 +171,21 @@ const output1 = users.reduce(function (acc, curr) {
 }, {});
 console.log(output1);
 
+//..........................................................
+
+ function fetchData(callback) {
+   setTimeout(function () {
+     console.log("Data has been fetched!");
+     callback();
+   }, 2000);
+ }
+
+ function processData() {
+   console.log("Data processing complete!");
+ }
+
+ fetchData(processData);
+
+  // Output:
+  // Data has been fetched!
+  // Data processing complete! call back fun bad me run hota hai pahle main fun run hoga
