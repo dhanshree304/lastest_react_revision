@@ -856,19 +856,19 @@
 // foo([1,2,3,4,5],[3,4,5,6])
 
 //...........................................
-// var sum = function (a, b, c) {
-//   return {
-//     getSumTwo: function () {
-//       return a + b;
-//     },
-//     getSumThree: function () {
-//       return a + b + c;
-//     },
-//   };
-// };
-// var store = sum(2, 3, 4); //calling
-// console.log(store.getSumTwo());
-// console.log(store.getSumThree());
+var sum = function (a, b, c) {
+  return {
+    getSumTwo: function () {
+      return a + b;
+    },
+    getSumThree: function () {
+      return a + b + c;
+    },
+  };
+};
+var store = sum(2, 3, 4); //calling
+console.log(store.getSumTwo());
+console.log(store.getSumThree());
 
 //............................................
 
