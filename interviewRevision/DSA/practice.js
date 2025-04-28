@@ -905,16 +905,14 @@
 
 //...........................................................
 
+function isSeniorCitizen(age) {
+  // Write code here
 
- function fetchData(callback) {
-   setTimeout(function () {
-     console.log("Data has been fetched!");
-     callback();
-   }, 2000);
- }
+  if (age >= 60) {
+    console.log("Senior Citizen");
+  } else {
+    console.log("Not Senior Citizen");
+  }
+}
 
- function processData() {
-   console.log("Data processing complete!");
- }
-
- fetchData(processData);
+isSeniorCitizen(34)
