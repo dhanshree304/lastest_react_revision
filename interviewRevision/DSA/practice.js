@@ -839,21 +839,21 @@
 
 //Enter code here
 
-// function foo(arr1,arr2){
-//     let arr3=[...arr1,...arr2].sort((a,b)=>a-b)
-//     console.log(arr3)
+function foo(arr1,arr2){
+    let arr3=[...arr1,...arr2].sort((a,b)=>a-b)
+    console.log(arr3)
     
-//     let bag=""
-//     for(let i=0;i<arr3.length;i++){
-//         if(arr3[i]==arr3[i+1]){
-//             continue
-//         }else{
-//             bag+=arr3[i]+ " "
-//         }
-//     }
-//     console.log(bag.split(" "))
-// }
-// foo([1,2,3,4,5],[3,4,5,6])
+    let bag=""
+    for(let i=0;i<arr3.length;i++){
+        if(arr3[i]==arr3[i+1]){
+            continue
+        }else{
+            bag+=arr3[i]+ " "
+        }
+    }
+    console.log(bag.split(" "))
+}
+foo([1,2,3,4,5],[3,4,5,6])
 
 //...........................................
 var sum = function (a, b, c) {
