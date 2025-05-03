@@ -770,46 +770,46 @@
 
 
 
-// function foo(arr) {
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] % 2 == 0) {
-//       console.log(arr[i]);
+function foo(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      console.log(arr[i]);
    
-//     }
-//   }
-// }
-// foo([1, 2, 3, 4, 5]);
+    }
+  }
+}
+foo([1, 2, 3, 4, 5]);
 
-//..............................................
-
-
+..............................................
 
 
-// function detectPalII(N, string) {
-//   //write code here
 
-//   let obj = {};
-//   for (let i = 0; i < N; i++) {
-//     if (obj[string[i]] === undefined) {
-//       obj[string[i]] = 1;
-//     } else {
-//       obj[string[i]] += 1;
-//     }
-//   }
-//   let count = 0;
-//   for (let key in obj) {
-//     if (obj[key] % 2 != 0) {
-//       count++;
-//     }
-//   }
 
-//   if (count <= 1) {
-//     console.log("Pal");
-//   } else {
-//     console.log("Not Pal");
-//   }
-// }
-// detectPalII(6,"aaabcc")
+function detectPalII(N, string) {
+  //write code here
+
+  let obj = {};
+  for (let i = 0; i < N; i++) {
+    if (obj[string[i]] === undefined) {
+      obj[string[i]] = 1;
+    } else {
+      obj[string[i]] += 1;
+    }
+  }
+  let count = 0;
+  for (let key in obj) {
+    if (obj[key] % 2 != 0) {
+      count++;
+    }
+  }
+
+  if (count <= 1) {
+    console.log("Pal");
+  } else {
+    console.log("Not Pal");
+  }
+}
+detectPalII(6,"aaabcc")
 
 //....................................................
 //Enter code here
