@@ -189,3 +189,35 @@ console.log(output1);
   // Output:
   // Data has been fetched!
   // Data processing complete! call back fun bad me run hota hai pahle main fun run hoga
+
+  //........................................
+
+  
+
+  function maxSubArray(arr) {
+    let maxSum = arr[0];
+    let currentSum = arr[0];
+    let start = 0,
+      end = 0,
+      tempStart = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > currentSum + arr[i]) {
+        currentSum = arr[i];
+        tempStart = i;
+      } else {
+        currentSum += arr[i];
+      }
+
+      if (currentSum > maxSum) {
+        maxSum = currentSum;
+        start = tempStart;
+        end = i;
+      }
+    }
+
+    return {
+      maxSum,
+      subarray: arr.slice(start, end + 1),
+    };
+  }
