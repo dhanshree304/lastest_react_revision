@@ -192,7 +192,7 @@ console.log(output1);
 
   //........................................
 
-  
+
 
   function maxSubArray(arr) {
     let maxSum = arr[0];
@@ -221,3 +221,63 @@ console.log(output1);
       subarray: arr.slice(start, end + 1),
     };
   }
+
+
+  //...................................................
+
+ // 🔹 1. Subarray with a Given Sum non-negative no inarr
+
+ function findSubarraysWithSum(arr, targetSum) {
+    const result = [];
+    let start = 0, end = 0, currentSum = 0;
+
+    while (end < arr.length) {
+        currentSum += arr[end];
+
+        while (currentSum > targetSum && start <= end) {
+            currentSum -= arr[start];
+            start++;
+        }
+
+        if (currentSum === targetSum) {
+            result.push(arr.slice(start, end + 1));
+        }
+
+        end++;
+    }
+
+    return result;
+}
+
+// Example usage:
+const arr = [1, 2, 3, 4, 5];
+const targetSum = 9;
+console.log(findSubarraysWithSum(arr, targetSum));
+// Output: [ [2, 3, 4], [4, 5] ]
+
+
+//...............................
+//negative numbers
+
+// function findSubarraysWithSum(arr, targetSum) {
+//     const result = [];
+//     const n = arr.length;
+
+//     for (let start = 0; start < n; start++) {
+//         let currentSum = 0;
+//         for (let end = start; end < n; end++) {
+//             currentSum += arr[end];
+//             if (currentSum === targetSum) {
+//                 result.push(arr.slice(start, end + 1));
+//             }
+//         }
+//     }
+
+//     return result;
+// }
+
+// // Example usage:
+// const arr = [10, 2, -2, -20, 10];
+// const targetSum = -10;
+// console.log(findSubarraysWithSum(arr, targetSum));
+// // Output: [ [ 10, 2, -2, -20 ], [ 2, -2, -20, 10 ] ]
