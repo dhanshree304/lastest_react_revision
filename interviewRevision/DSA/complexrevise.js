@@ -223,9 +223,9 @@ console.log(output1);
   }
 
 
-  //...................................................
+ // ...................................................
 
- // 🔹 1. Subarray with a Given Sum non-negative no inarr
+ //🔹 1. Subarray with a Given Sum non-negative no inarr
 
  function findSubarraysWithSum(arr, targetSum) {
     const result = [];
@@ -259,25 +259,84 @@ console.log(findSubarraysWithSum(arr, targetSum));
 //...............................
 //negative numbers
 
-// function findSubarraysWithSum(arr, targetSum) {
-//     const result = [];
-//     const n = arr.length;
+function findSubarraysWithSum(arr, targetSum) {
+    const result = [];
+    const n = arr.length;
 
-//     for (let start = 0; start < n; start++) {
-//         let currentSum = 0;
-//         for (let end = start; end < n; end++) {
-//             currentSum += arr[end];
-//             if (currentSum === targetSum) {
-//                 result.push(arr.slice(start, end + 1));
-//             }
-//         }
-//     }
+    for (let start = 0; start < n; start++) {
+        let currentSum = 0;
+        for (let end = start; end < n; end++) {
+            currentSum += arr[end];
+            if (currentSum === targetSum) {
+                result.push(arr.slice(start, end + 1));
+            }
+        }
+    }
 
-//     return result;
-// }
+    return result;
+}
 
-// // Example usage:
-// const arr = [10, 2, -2, -20, 10];
-// const targetSum = -10;
-// console.log(findSubarraysWithSum(arr, targetSum));
-// // Output: [ [ 10, 2, -2, -20 ], [ 2, -2, -20, 10 ] ]
+// Example usage:
+const arr = [10, 2, -2, -20, 10];
+const targetSum = -10;
+console.log(findSubarraysWithSum(arr, targetSum));
+// Output: [ [ 10, 2, -2, -20 ], [ 2, -2, -20, 10 ] ]
+
+
+//............................................................
+
+
+//🔹 2. Subarray with a Given Product
+
+function countSubarraysWithProduct(arr, k) {
+    let count = 0;
+    const n = arr.length;
+
+    for (let start = 0; start < n; start++) {
+        let product = 1;
+        for (let end = start; end < n; end++) {
+            product *= arr[end];
+            if (product === k) {
+                count++;
+            }
+            // Early termination if product exceeds k
+            if (product > k) break;
+        }
+    }
+
+    return count;
+}
+
+// Example usage:
+const arr = [2, 1, 1, 1, 4, 5];
+const k = 4;
+console.log(countSubarraysWithProduct(arr, k)); // Output: 4
+
+
+//..................................................................
+
+
+//🔹 4. Subarray with Maximum Product
+
+function maxProductSubarray(nums) {
+    if (nums.length === 0) return 0;
+
+    let maxProduct = nums[0];
+    let minProduct = nums[0];
+    let result = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+        const current = nums[i];
+        const tempMax = Math.max(current, maxProduct * current, minProduct * current);
+        minProduct = Math.min(current, maxProduct * current, minProduct * current);
+        maxProduct = tempMax;
+
+        result = Math.max(result, maxProduct);
+    }
+
+    return result;
+}
+
+// Example usage:
+const nums = [2, 3, -2, 4];
+console.log(maxProductSubarray(nums)); // Output: 6
